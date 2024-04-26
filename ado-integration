@@ -1,0 +1,31 @@
+##first i need to upload the key inside the ado repo. to do the same we will do the authentication
+
+ssh-keygen -t rsa 
+###################################################
+copy the public key and upload it inside ado
+
+cat C:\Users\gopal\.ssh\id_rsa.pub
+
+#########next in our workstation we will make the code ours
+
+ 40 rm .git
+  41 git config --global user.name "gopal"
+  42 git config --global user.email "gopal1409@gmail.com"
+  #the purpose of global varaible wheneever you create a version the code will have a name and email id 
+  ##again i ll intialized teh code
+  43 git init
+  ###git add will move my code to staging area
+  44 git add .
+  ##git commit will create my version 
+  45 git commit -m "terraform code to create vm"
+  ###git log will show the versxion
+  46 git log
+
+  ###to do the authentication we need to create a service princiapl using the service principal we can do the authentication
+  ##service princiapl with contributor role need to be created 
+  az ad sp create-for-rbac -n "kenservicep" --role contributor --scope /subscriptions/def2cf32-c635-4684-ad00-5703dbddbe44 
+  #lets install the agent 
+   2  mkdir myagent && cd myagent
+    3  wget https://vstsagentpackage.azureedge.net/agent/3.238.0/vsts-agent-linux-x64-3.238.0.tar.gz
+    4  tar zxvf vsts-agent-linux-x64-3.238.0.tar.gz
+   asda

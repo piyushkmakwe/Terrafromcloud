@@ -1,0 +1,13 @@
+#how to install choco package manager
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+##after installing choco package manager 
+##close the power shell and start again with admin privilage
+
+####
+choco install azure-cli
+choco install terraform
+choco install git.install
+
+###finally install visual code 
+choco install vscode

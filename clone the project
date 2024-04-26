@@ -1,0 +1,8 @@
+###first clone the project
+git clone https://gitlab.com/gopal1409/kem-terraform-manifest-bathc1
+cd kem-terraform-manifest-bathc1
+
+###then intialized it 
+terraform init 
+###then check that a file with .terraform created or not 
+ls

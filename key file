@@ -1,0 +1,7 @@
+lets generate they key
+###################################
+2 mkdir ssh-keys
+   3 cd .\ssh-keys\
+   4 ssh-keygen -m PEM -t rsa -b 4096 -C azureuser@myserver -f terrafrom-azure.pem
+   5 ls
+   6 mv .\terrafrom-azure.pem.pub .\terrafrom-azure.pub
